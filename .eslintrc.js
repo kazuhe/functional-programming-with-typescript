@@ -9,7 +9,13 @@ module.exports = {
 
   plugins: ['prettier'],
 
-  extends: ['eslint:recommended', 'plugin:prettier/recommended'],
+  extends: [
+    'plugin:@typescript-eslint/recommended',
+    'eslint:recommended',
+    'plugin:prettier/recommended',
+  ],
+
+  parser: '@typescript-eslint/parser',
 
   parserOptions: {
     ecmaVersion: 2021,
@@ -18,6 +24,7 @@ module.exports = {
 
   rules: {
     'prettier/prettier': ['error', { singleQuote: true, semi: false }],
-    'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': ['error'],
   },
 }
