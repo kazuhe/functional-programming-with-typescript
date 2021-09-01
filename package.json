@@ -1,0 +1,27 @@
+{
+  "name": "functional-programming-with-typescript",
+  "version": "0.1.0",
+  "description": "Functional programming with TypeScript 💊",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kazuhe/functional-programming-with-typescript.git"
+  },
+  "author": "Kazuhiro Ohara",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kazuhe/functional-programming-with-typescript/issues"
+  },
+  "homepage": "https://github.com/kazuhe/functional-programming-with-typescript#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.30.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.3.2",
+    "typescript": "^4.4.2"
+  }
+}
