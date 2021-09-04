@@ -4,7 +4,8 @@
   "description": "Functional programming with TypeScript 💊",
   "main": "index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "serve": "yarn build | node ./dist/index"
   },
   "repository": {
     "type": "git",
