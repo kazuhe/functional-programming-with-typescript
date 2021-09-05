@@ -2,8 +2,8 @@
   "compilerOptions": {
     "rootDir": "./src",
     "outDir": "./dist",
-    "target": "es5",
-    "module": "esnext",
+    "target": "es2015",
+    "module": "commonjs",
     "strict": true,
     "importHelpers": true,
     "moduleResolution": "node",
