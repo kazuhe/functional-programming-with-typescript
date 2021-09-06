@@ -3,9 +3,6 @@
  * @param transform 変換関数
  * @returns 新しい配列に変換する関数
  */
-export type Mapper = (transform: any) => (array: number[]) => never[]
+export type Mapper = <T, U>(transform: (x: T) => U) => (array: T[]) => U[]
 
-export const mapper: Mapper = (transform) => (array) =>
-  array.reduce((accumulator, item) => {
-    return accumulator.concat(transform(item))
-  }, [])
+export const mapper: Mapper = (transform) => (array) => array.map(transform)
