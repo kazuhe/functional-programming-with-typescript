@@ -7,24 +7,24 @@ module.exports = {
     node: true,
   },
 
-  plugins: ['prettier'],
+  plugins: ["prettier"],
 
   extends: [
-    'plugin:@typescript-eslint/recommended',
-    'eslint:recommended',
-    'plugin:prettier/recommended',
+    "plugin:@typescript-eslint/recommended",
+    "eslint:recommended",
+    "plugin:prettier/recommended",
   ],
 
-  parser: '@typescript-eslint/parser',
+  parser: "@typescript-eslint/parser",
 
   parserOptions: {
     ecmaVersion: 2021,
-    sourceType: 'module',
+    sourceType: "module",
   },
 
   rules: {
-    'prettier/prettier': ['error', { singleQuote: true, semi: false }],
-    'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': ['error'],
+    "prettier/prettier": ["error", {}],
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error"],
   },
-}
+};
