@@ -1,4 +1,4 @@
-import { personsToFullname } from "./map";
+import { personsToFullname, personsToFullnameReverse } from "./map";
 
 export type Person = {
   firstname: string;
@@ -35,4 +35,5 @@ const p4 = createPerson("Alonzo", "Church", "444-44-4444", "US", 1903);
 
 export const persons = [p1, p2, p3, p4];
 
-console.log(personsToFullname(persons));
+console.log("personsToFullname: ", personsToFullname(persons));
+console.log("personsToFullnameReverse: ", personsToFullnameReverse(persons));

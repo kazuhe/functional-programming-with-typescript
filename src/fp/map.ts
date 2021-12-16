@@ -1,13 +1,16 @@
-// import _, { map, reverse } from "lodash";
-import { map } from "lodash";
+import _, { map } from "lodash";
 import { Person } from ".";
 
-// console.log("normal ", persons);
-// console.log("\nwrap ", _(persons));
+const iterator = (x: Person) =>
+  x !== null && x !== undefined ? x.fullname : "";
 
-export const personsToFullname = (persons: Person[]) =>
-  map(persons, (x) => (x !== null && x !== undefined ? x.fullname : ""));
+export const personsToFullname = (persons: Person[]): string[] =>
+  map(persons, iterator);
 
-// _(persons)
-//   .reverse()
-//   .map((x) => (x !== null && x !== undefined ? x : ""));
+// `_()` で値をラップすることでメソッドチェーンシーケンスを有効にするlodashオブジェクトが作成される
+// 単一の値を取得するメソッド、またはプリミティブ値を返す可能性のあるメソッドは
+// チェーンシーケンスを自動的に終了しラップされていない値を返す
+// それ以外の場合は `value()` でラップを解除する必要がある
+// また、遅延実行されており、`value()` が暗黙的または明示的に呼び出されるまで延期される
+export const personsToFullnameReverse = (persons: Person[]): string[] =>
+  _(persons).reverse().map(iterator).value();
