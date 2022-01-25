@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/kazuhe/functional-programming-with-typescript#readme",
   "devDependencies": {
+    "@types/ramda": "^0.27.64",
     "@typescript-eslint/eslint-plugin": "^4.30.0",
     "@typescript-eslint/parser": "^4.30.0",
     "eslint": "^7.32.0",
@@ -28,6 +29,7 @@
   },
   "dependencies": {
     "@types/lodash": "^4.14.178",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "ramda": "^0.28.0"
   }
 }
